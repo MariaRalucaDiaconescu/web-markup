@@ -131,8 +131,12 @@ footer {
 
     text-decoration: none;
     font-weight: bolder;
-    color: black;
-    
+    color: #000000;
+    line-height: 60px;
+    display:inline-block;
+    width:35%;
+    background-color: #FFBD3E;
+    text-align: center;
 }
 
 
@@ -143,12 +147,6 @@ article {
 }
 
 
-
-article button {
-    width: 35%;
-    background-color: #FFBD3E;
-    border: none;
-}
 
 
 main {
