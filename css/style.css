@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+
+body {
+    font-size: 100%;
+    font-family: "Arial", "Helvetica", sans-serif;
+    padding: 10px;
+}
+
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+
+
+nav li {
+    background: #ffffff;
+
+    outline: 3px solid #000000;
+
+    color: #000000;
+
+    display: inline-block;
+
+    width: 16.35%;
+
+    font-size: 1.625rem;
+
+    font-weight: bolder;
+    text-align: center;
+
+    line-height: 40px;
+
+
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+
+main p,
+main a {
+    font-size: 26px;
+}
+
+
+
+nav a:active {
+    color: #ffffff;
+    background-color: #000000;
+    display: block;
+}
+
+#homepage-content ol {
+    list-style: none;
+    margin-bottom: 70px;
+}
+
+
+footer {
+    border: 2px solid #000000;
+    font-size: 28px;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+
+
+
+#social-media-links {
+    list-style: none;
+    background-color: #FFD916;
+    width: 70px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+
+
+#homepage-content>button {
+    font-size: 32px;
+    font-weight: bolder;
+    border-radius: 0;
+    background-color: #FFBD3E;
+    border: none;
+    padding: 12px;
+}
+
+#links-to-articles li {
+    font-size: 38px;
+    line-height: 57px;
+}
+
+#links-to-articles li::marker {
+    content: "▶";
+    color: #FFBD3E;
+}
+
+
+
+#city-overview-content img {
+    width: 35%;
+    float: left;
+    margin-bottom: 40px;
+}
+
+
+#city-overview-content>article h2,
+#city-overview-content>article p {
+    float: right;
+    width: 62%;
+}
+
+#city-overview-content>article p {
+    margin-bottom: 100px;
+}
+
+
+.link-to-photo-gallery {
+
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    line-height: 60px;
+}
+
+
+article {
+
+    padding-bottom: 20px;
+    background-color: cornflowerblue;
+}
+
+
+
+article button {
+    width: 35%;
+    background-color: #FFBD3E;
+    border: none;
+}
+
+
+main {
+    background-color: chartreuse;
+}
+
+
+@media only screen and (min-width:1280px) {
+
+    #websitename {
+        padding: 10px;
+    }
+
+
+    #homepage-image {
+        width: 50%;
+        float: left;
+        margin-right: 40px;
+
+    }
+
+    main {
+        padding-top: 35px;
+        padding-bottom: 220px;
+    }
+
+    #city-overview-content {
+        display: flex;
+
+        flex-direction: column;
+
+        height: 2300px;
+
+        gap: 10px;
+    }
+
+    article {
+        flex-grow: 1;
+
+    }
+
+
+    #hamburger-menu-icon {
+        display: none;
+    }
+
+    #social-media-links {
+        height: 140px;
+        margin-top: 10%;
+        float: right;
+        position: sticky;
+    }
+
+    main>h1:first-child {
+        display: none;
+    }
+
+    footer {
+        clear: left;
+    }
+
+}
+
+/*tablet*/
+
+@media only screen and (min-width:481px) and (max-width:1279px) {
+    body {
+        background-color: Orange;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 30% auto auto;
+    }
+
+    header {
+        grid-column: 1;
+    }
+
+    main {
+        grid-column: 2/3;
+    }
+
+    footer {
+        grid-column: 1/3;
+
+    }
+
+
+    #hamburger-menu-icon {
+        margin-top: 30px;
+        position: relative;
+        display: block;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    nav:hover .tabs {
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 170px;
+        left: 0;
+        display: block;
+
+
+    }
+
+    .tabs li {
+        display: list-item;
+        font-size: 1.625em;
+        width: 25%;
+    }
+
+
+    #websitename {
+        display: none;
+    }
+
+
+
+
+
+    main>h1:first-child {
+
+        line-height: 130px;
+        margin-top: 0px;
+    }
+
+
+
+    #homepage-image {
+        width: 100%;
+    }
+
+    #social-media-links {
+        height: 120px;
+        position: fixed;
+        left: 0;
+        margin-top: 15%;
+    }
+
+
+    #homepage-content ol {
+        padding-left: 0px;
+    }
+
+    header,
+    main {
+        padding-bottom: 170px;
+    }
+
+
+
+}
