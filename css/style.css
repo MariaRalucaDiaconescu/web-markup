@@ -12,7 +12,9 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
+    
 }
+
 
 
 
@@ -30,6 +32,7 @@ nav li {
 
     font-size: 1.625rem;
 
+
     font-weight: bolder;
     text-align: center;
 
@@ -43,7 +46,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: #000000;
-
 }
 
 
@@ -154,6 +156,7 @@ main {
 }
 
 
+
 @media only screen and (min-width:1280px) {
 
     #websitename {
@@ -236,10 +239,12 @@ main {
     }
 
 
+
     #hamburger-menu-icon {
         margin-top: 30px;
         position: relative;
         display: block;
+        
     }
 
     .tabs {
@@ -260,8 +265,8 @@ main {
 
     .tabs li {
         display: list-item;
-        font-size: 1.625em;
-        width: 25%;
+        font-size: 1.25em;
+        width: 30%;
     }
 
 
@@ -274,15 +279,16 @@ main {
 
 
     main>h1:first-child {
+       font-family: 'Notable', sans-serif;
+       border:1px solid black;
 
-        line-height: 130px;
-        margin-top: 0px;
     }
 
 
 
     #homepage-image {
-        width: 100%;
+        max-width: 100%;
+        margin-top:60px;
     }
 
     #social-media-links {
@@ -303,5 +309,7 @@ main {
     }
 
 
-
 }
+
+
+
