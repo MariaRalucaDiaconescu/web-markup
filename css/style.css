@@ -10,16 +10,15 @@ body {
 
 nav ul {
     padding: 0;
-    margin: 0;
     list-style: none;
-    
+
 }
 
 
 
 
 
-nav li {
+.tabs li {
     background: #ffffff;
 
     outline: 3px solid #000000;
@@ -83,11 +82,9 @@ footer {
 #social-media-links {
     list-style: none;
     background-color: #FFD916;
-    width: 70px;
-    padding-top: 20px;
-    padding-left: 20px;
-
+    position: fixed;
 }
+
 
 
 #homepage-content>button {
@@ -135,8 +132,8 @@ footer {
     font-weight: bolder;
     color: #000000;
     line-height: 60px;
-    display:inline-block;
-    width:35%;
+    display: inline-block;
+    width: 35%;
     background-color: #FFBD3E;
     text-align: center;
 }
@@ -145,23 +142,13 @@ footer {
 article {
 
     padding-bottom: 20px;
-    background-color: cornflowerblue;
 }
 
 
-
-
-main {
-    background-color: chartreuse;
-}
 
 
 
 @media only screen and (min-width:1280px) {
-
-    #websitename {
-        padding: 10px;
-    }
 
 
     #homepage-image {
@@ -197,15 +184,17 @@ main {
     }
 
     #social-media-links {
-        height: 140px;
+        width: 70px;
+        padding-top: 20px;
+        padding-left: 20px;
+
+        height: 120px;
         margin-top: 10%;
         float: right;
-        position: sticky;
+        right: 0%;
+
     }
 
-    main>h1:first-child {
-        display: none;
-    }
 
     footer {
         clear: left;
@@ -216,9 +205,6 @@ main {
 /*tablet*/
 
 @media only screen and (min-width:481px) and (max-width:1279px) {
-    body {
-        background-color: Orange;
-    }
 
     body {
         display: grid;
@@ -241,11 +227,18 @@ main {
 
 
     #hamburger-menu-icon {
-        margin-top: 30px;
+        margin-top: 0px;
+        width: 55px;
+        height: 55px;
         position: relative;
         display: block;
-        
+
     }
+
+    nav {
+        margin-top: 20px;
+    }
+
 
     .tabs {
         display: none;
@@ -256,7 +249,7 @@ main {
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 170px;
+        top: 140px;
         left: 0;
         display: block;
 
@@ -265,37 +258,29 @@ main {
 
     .tabs li {
         display: list-item;
-        font-size: 1.625em;
-        width: 25%;
+        font-size: 1.375em;
+        width: 30%;
+        line-height: 30px;
     }
-
-
-    #websitename {
-        display: none;
-    }
-
-
-
-
-
-    main>h1:first-child {
-       font-family: 'Notable', sans-serif;
-       border:1px solid black;
-
-    }
-
 
 
     #homepage-image {
         max-width: 100%;
-        margin-top:60px;
+        margin-top: 125px;
+    }
+
+
+    h1:first-child {
+        margin-top: 140px;
     }
 
     #social-media-links {
-        height: 120px;
-        position: fixed;
+        height: 85px;
+        width: 45px;
+        padding: 5px;
         left: 0;
-        margin-top: 15%;
+        margin-top: 17%;
+
     }
 
 
@@ -305,9 +290,74 @@ main {
 
     header,
     main {
-        padding-bottom: 170px;
+        padding: 10px 10px 170px 10px;
+    }
+
+    #website-logo {
+
+        max-width: 100%;
+
     }
 
 
+    #social-media-links img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+}
+
+/*tablet*/
+
+@media only screen and (min-width:481px) and (max-width:800px) {
+
+    #hamburger-menu-icon {
+        margin-top: 0px;
+    }
+
+    .tabs li {
+        line-height: 25px;
+        font-size: 1.125em;
+    }
+
+
+    #social-media-links {
+        margin-top: 25%;
+        height: 70px;
+        padding: 5px;
+        width: 35px;
+        left: 0;
+    }
+
+
+
+    #social-media-links img {
+        width: 32px;
+        height: 32px;
+    }
+
+
+
+    nav {
+        margin-top: 50px;
+    }
+
+    nav:hover .tabs {
+        top: 125px;
+    }
+
+
+    h1:first-child {
+        margin-top: 115px;
+
+    }
+
+
+
+    #homepage-image {
+        margin-top: 110px;
+    }
 
 }
