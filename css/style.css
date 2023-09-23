@@ -48,8 +48,9 @@ nav a {
 }
 
 
-main p,
-main a {
+p,
+main a,
+main ul {
     font-size: 26px;
 }
 
@@ -107,42 +108,16 @@ footer {
 }
 
 
-
-#city-overview-content img {
-    width: 35%;
-    float: left;
-    margin-bottom: 40px;
-}
-
-
-#city-overview-content>article h2,
-#city-overview-content>article p {
-    float: right;
-    width: 62%;
-}
-
-#city-overview-content>article p {
-    margin-bottom: 100px;
-}
-
-
 .link-to-photo-gallery {
 
     text-decoration: none;
     font-weight: bolder;
     color: #000000;
     line-height: 60px;
-    display: inline-block;
-    width: 35%;
     background-color: #FFBD3E;
     text-align: center;
 }
 
-
-article {
-
-    padding-bottom: 20px;
-}
 
 
 
@@ -163,20 +138,23 @@ article {
         padding-bottom: 220px;
     }
 
-    #city-overview-content {
+    .detail-page-content {
         display: flex;
 
         flex-direction: column;
 
-        height: 2300px;
+        min-height: 2300px;
 
         gap: 10px;
+
     }
+
+
 
     article {
         flex-grow: 1;
-
     }
+
 
 
     #hamburger-menu-icon {
@@ -199,6 +177,46 @@ article {
     footer {
         clear: left;
     }
+
+
+    .detail-page-content img {
+        width: 35%;
+        float: left;
+        margin-bottom: 40px;
+    }
+
+
+    .detail-page-content>article h2,
+    .detail-page-content>article p,
+    .detail-page-content>article ul {
+        float: right;
+        width: 55%;
+        padding-right: 85px;
+    }
+
+
+
+
+    article {
+
+        padding-bottom: 20px;
+    }
+
+
+    .link-to-photo-gallery {
+        display: inline-block;
+        width: 35%;
+    }
+
+
+    .detail-page-content>article p:last-of-type {
+        margin-bottom: 100px;
+    }
+
+    .detail-page-content>article ul {
+        list-style: none;
+    }
+
 
 }
 
@@ -230,14 +248,15 @@ article {
         margin-top: 0px;
         width: 55px;
         height: 55px;
-        position: relative;
-        display: block;
 
     }
 
     nav {
-        margin-top: 20px;
+        position: relative;
+        padding: 15px 0px 15px 0px;
+
     }
+
 
 
     .tabs {
@@ -246,27 +265,26 @@ article {
 
     nav:hover .tabs {
 
-        width: 100%;
-        height: 100%;
         position: absolute;
-        top: 140px;
-        left: 0;
+        top: 0px;
+        left: 0px;
         display: block;
-
+        width: 100%;
 
     }
 
     .tabs li {
         display: list-item;
-        font-size: 1.375em;
-        width: 30%;
+        font-size: 1.25em;
         line-height: 30px;
+        width: 100%;
+
     }
 
 
     #homepage-image {
         max-width: 100%;
-        margin-top: 125px;
+        margin-top: 135px;
     }
 
 
@@ -279,7 +297,7 @@ article {
         width: 45px;
         padding: 5px;
         left: 0;
-        margin-top: 17%;
+        margin-top: 15%;
 
     }
 
@@ -306,6 +324,23 @@ article {
     }
 
 
+    .detail-page-content img {
+        max-width: 100%;
+
+    }
+
+    .link-to-photo-gallery {
+
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    section,
+    article {
+        margin-bottom: 30px;
+    }
+
 
 }
 
@@ -313,22 +348,30 @@ article {
 
 @media only screen and (min-width:481px) and (max-width:800px) {
 
-    #hamburger-menu-icon {
-        margin-top: 0px;
+
+    nav {
+        position: static;
+        margin-top: 55px;
+    }
+
+    nav:hover .tabs {
+
+        top: 135px;
+        width: 30%;
     }
 
     .tabs li {
-        line-height: 25px;
-        font-size: 1.125em;
+        font-size: .875em;
+        font-weight: 900;
     }
 
 
     #social-media-links {
-        margin-top: 25%;
+        margin-top: 22%;
         height: 70px;
         padding: 5px;
         width: 35px;
-        left: 0;
+        left: 0%;
     }
 
 
@@ -340,15 +383,6 @@ article {
 
 
 
-    nav {
-        margin-top: 50px;
-    }
-
-    nav:hover .tabs {
-        top: 125px;
-    }
-
-
     h1:first-child {
         margin-top: 115px;
 
@@ -357,7 +391,7 @@ article {
 
 
     #homepage-image {
-        margin-top: 110px;
+        margin-top: 120px;
     }
 
 }
