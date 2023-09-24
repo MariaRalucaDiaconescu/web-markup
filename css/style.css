@@ -7,6 +7,10 @@ body {
     padding: 10px;
 }
 
+@font-face {
+    font-family: 'Arial Monospaced MT';
+    src: url('arial_monospaced_mt.ttf');
+}
 
 nav ul {
     padding: 0;
@@ -120,7 +124,67 @@ footer {
 
 
 
+h1 {
+    font-family: 'Notable', sans-serif;
+    font-weight: lighter;
+}
 
+
+
+
+p+ul li {
+    padding: 10px 0px 10px 0px;
+}
+
+
+td {
+    text-align: center;
+}
+
+table {
+    padding-right: 100px;
+}
+
+
+tr th:first-child {
+    background-color: #FF0;
+}
+
+article:first-of-type ul li::first-letter {
+    font-size: 32px;
+
+
+}
+
+
+article a:hover {
+    font-size: 28px;
+}
+
+article a:active {
+    background-color: blue;
+    color: white;
+}
+
+figure{
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+
+figure img {
+    border-style: double;
+    border-color: rgb(233, 149, 173);
+
+    border-width: .25em;
+
+}
+
+
+.detail-page-content>article ul {
+    list-style: none;
+}
 
 
 @media only screen and (min-width:1280px) {
@@ -188,10 +252,12 @@ footer {
 
     .detail-page-content>article h2,
     .detail-page-content>article p,
-    .detail-page-content>article ul {
+    .detail-page-content>article ul,
+    table,
+    video {
         float: right;
         width: 55%;
-        padding-right: 85px;
+        margin-right: 85px;
     }
 
 
@@ -213,12 +279,41 @@ footer {
         margin-bottom: 100px;
     }
 
-    .detail-page-content>article ul {
-        list-style: none;
+ 
+
+    figure {
+        display: flex;
+        width: 95%;
+        margin-bottom: 100px;
     }
 
+    figure img,
+    figcaption {
+        margin-left: 33%;
 
+    }
+
+    figcaption {
+        font-size: 12px;
+        letter-spacing: .5px;
+    }
+
+    video {
+        margin-bottom: 100px;
+    }
+
+    article:first-of-type ul+p {
+        text-indent: 52px;
+    
+    }
+
+    tr td:not(:nth-of-type(1)) {
+        font-family: 'Arial Monospaced MT', sans-serif;
+        word-spacing: .5em;
+    }
 }
+
+
 
 /*tablet*/
 
@@ -337,9 +432,13 @@ footer {
     }
 
     section,
-    article {
-        margin-bottom: 30px;
+    article,
+    figure {
+        margin-bottom: 110px;
     }
+
+
+video {width: 100%;}
 
 
 }
