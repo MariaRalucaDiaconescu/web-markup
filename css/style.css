@@ -162,8 +162,8 @@ article a:hover {
 }
 
 article a:active {
-    background-color: blue;
-    color: white;
+    background-color: #0000ff;
+    color: #ffffff;
 }
 
 figure{
@@ -175,7 +175,7 @@ flex-direction: column;
 
 figure img {
     border-style: double;
-    border-color: rgb(233, 149, 173);
+    border-color: #e995ad;
 
     border-width: .25em;
 
@@ -186,6 +186,13 @@ figure img {
     list-style: none;
 }
 
+
+
+@media print {
+    main {
+        color: cmyk(0% 22% 83% 0%);
+    }
+}
 
 @media only screen and (min-width:1280px) {
 
