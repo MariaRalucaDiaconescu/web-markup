@@ -190,7 +190,7 @@ figure img {
 
 @media print {
     main {
-        color: cmyk(0% 22% 83% 0%);
+        color: cmyk(0%, 22%, 83%, 0%);
     }
 }
 
