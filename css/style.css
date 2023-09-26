@@ -197,6 +197,12 @@ figure img {
 }
 
 
+video{max-width:100%;}
+
+
+.link-to-photo-gallery {
+
+    display: inline-block;}
 
 
 @media only screen and (min-width:1280px) {
@@ -270,7 +276,6 @@ figure img {
 
 
     .link-to-photo-gallery {
-        display: inline-block;
         width: 35%;
     }
 
@@ -415,7 +420,6 @@ figure img {
 
     .link-to-photo-gallery {
 
-        display: inline-block;
         width: 100%;
     }
 
@@ -423,11 +427,6 @@ figure img {
     article,
     figure {
         margin-bottom: 80px;
-    }
-
-
-    video {
-        width: 100%;
     }
 
     main {
@@ -482,5 +481,51 @@ figure img {
         display: none;
     }
 
+#hamburger-menu-icon{display:none;}
 
+  .tabs {
+        width: 100%;
+
+    }
+
+
+    .tabs li {
+        display: list-item;
+        width: 100%;
+        font-size:1.125em;
+    }
+
+    img{max-width:100%;}
+
+    main{padding:30px 30px 100px 30px;}
+
+
+    
+    #social-media-links {
+        bottom: 10%;
+        height: 70px;
+        padding: 2px;
+        width: 35px;
+        left:0%;
+    }
+
+
+
+    #social-media-links img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #website-logo {
+        max-width: 40%;
+    }
+
+
+    article{margin-bottom:40px;}
+
+    .link-to-photo-gallery {
+        width: 100%;
+    }
 }
+
+
