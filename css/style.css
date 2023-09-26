@@ -31,13 +31,18 @@ ol {
 }
 
 
+nav ul li {
+    text-transform: uppercase;
+}
+
+
 .tabs li {
     background: #ffffff;
     outline: 3px solid #000000;
     color: #000000;
     display: inline-block;
     width: 16.35%;
-    font-size: 1.625rem;
+    font-size: 1.25em;
     font-weight: bolder;
     text-align: center;
     line-height: 40px;
@@ -65,9 +70,12 @@ article h2+img {
     padding-bottom: 20px;
 }
 
+
 h1:not(.detail-page-content > h1) {
     padding-bottom: 20px;
 }
+
+
 
 nav a:active {
     color: #ffffff;
@@ -204,6 +212,63 @@ video {
 }
 
 
+
+label:not(fieldset label),
+.submit-button {
+    display: block;
+}
+
+
+
+input,
+textarea,
+fieldset {
+    margin-bottom: 20px;
+
+}
+
+input,
+textarea {
+    border-radius: 0px;
+    border: 2px solid black;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    padding-left: 10px;
+}
+
+label,
+input:not(fieldset input):not(.submit-button),
+textarea,
+fieldset {
+    width: 100%;
+}
+
+
+label,
+input,
+input::placeholder {
+    font-size: 1.25em;
+}
+
+textarea::placeholder {
+    font-size: 1.625em;
+}
+
+input {
+    line-height: 40px;
+}
+
+textarea {
+    height: 8.75em;
+}
+
+
+
+
+
 @media only screen and (min-width:1280px) {
 
 
@@ -311,6 +376,13 @@ video {
         margin-bottom: 70px;
     }
 
+    label,
+    input:not(fieldset input):not(.submit-button),
+    textarea,
+    fieldset {
+        width: 50%;
+    }
+
 
 }
 
@@ -372,7 +444,6 @@ video {
 
     .tabs li {
         display: list-item;
-        font-size: 1.25em;
         line-height: 30px;
         width: 100%;
 
@@ -535,7 +606,6 @@ video {
     .link-to-photo-gallery {
         width: 100%;
     }
-
 
 
 }
