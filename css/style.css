@@ -479,7 +479,7 @@ footer {
 
 
     body {
-        flex-direction:row;
+         flex-direction:row; 
         flex-wrap: wrap;
     }
 
@@ -681,9 +681,6 @@ footer {
         padding: 4.0625em 2.5em 6.25em 1.875em;
     }
 
-    header {
-        position: relative;
-    }
 
     #social-media-links {
         display: flex;
@@ -692,7 +689,7 @@ footer {
         height: 50px;
         padding: 6px;
         width: 100%;
-        top: 295px;
+        top: 290px;
     }
 
 
