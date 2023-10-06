@@ -8,11 +8,21 @@
     box-sizing: border-box;
 }
 
+html {
+
+    font-size: 16px;
+
+}
 
 body {
-    font-size: 100%;
     font-family: "Arial", "Helvetica", sans-serif;
-    padding: 10px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 @font-face {
@@ -27,7 +37,19 @@ ul {
 
 
 ol {
-    padding-left: 40px;
+    padding-left: 2.5em;
+}
+
+#website-logo {
+    max-width: 17%;
+    padding-top: .625em;
+    padding-left: .625em;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -37,18 +59,20 @@ nav ul li {
 
 
 .tabs li {
-    background: #ffffff;
-    outline: 3px solid #000000;
+    background: #DC751E;
     color: #000000;
-    display: inline-block;
-    width: 16.35%;
-    font-size: 1.25em;
+    flex-basis: 16.7%;
+    font-size: 1.25rem;
     font-weight: bolder;
     text-align: center;
     line-height: 40px;
 }
 
-
+.active {
+    background: #9E4300;
+    display: block;
+    color: white;
+}
 
 nav a {
     text-decoration: none;
@@ -56,66 +80,54 @@ nav a {
 }
 
 
+
 p,
 main a,
 main ul {
-    font-size: 26px;
+    font-size: 1.375rem;
 }
 
-
-h2,
-p,
-ul,
-article h2+img {
-    padding-bottom: 20px;
+main {
+    padding: 1.25em .625em 11.25em .625em;
 }
 
-
-h1:not(.detail-page-content > h1) {
-    padding-bottom: 20px;
+h1,
+p:not(footer p),
+ul:not(nav ul),
+ol {
+    padding-bottom: 1.25em;
 }
 
-
+footer p {
+    padding: 10px;
+}
 
 nav a:active {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #9E4300;
     display: block;
 }
 
 
 
 footer {
-    border: 2px solid #000000;
-    font-size: 28px;
+    font-size: .75rem;
     text-align: center;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
 }
-
-
-
 
 #social-media-links {
-    background-color: #FFD916;
+    background-color: #FF703E;
     position: fixed;
+    width: 70px;
+    padding-top: .625em;
+    padding-left: .625em;
+    height: 122px;
+    margin-top: 10%;
 }
 
-
-
-#homepage-content>button {
-    font-size: 32px;
-    font-weight: bolder;
-    border-radius: 0px;
-    background-color: #FFBD3E;
-    border: none;
-    padding: 12px;
-}
 
 #links-to-articles li {
-    font-size: 38px;
-    line-height: 57px;
+    font-size: 1.375rem;
 }
 
 #links-to-articles li::marker {
@@ -124,19 +136,29 @@ footer {
 }
 
 
-.link-to-photo-gallery {
+#homepage-content p+a {
+    width: 17%;
+    margin-bottom: 3.125em;
+
+}
+
+.link-to-photo-gallery,
+#homepage-content p+a {
 
     text-decoration: none;
     font-weight: bolder;
     color: #000000;
     line-height: 60px;
-    background-color: #FFBD3E;
+    background-color: #FF963E;
     text-align: center;
+    display: inline-block;
+
 }
 
 
 
-h1 {
+h1,
+#homepage-content h2 {
     font-family: 'Notable', sans-serif;
     font-weight: lighter;
 }
@@ -145,7 +167,7 @@ h1 {
 
 
 p+ul li {
-    padding: 10px 0px 10px 0px;
+    padding: .625em 0em .625em 0em;
 }
 
 
@@ -159,14 +181,14 @@ tr th:first-child {
 }
 
 article:first-of-type ul li::first-letter {
-    font-size: 32px;
+    font-size: 2rem;
 
 
 }
 
 
-article a:hover {
-    font-size: 28px;
+article a:not(.link-to-photo-gallery):hover {
+    font-size: 1.5rem;
 }
 
 article a:active {
@@ -174,11 +196,6 @@ article a:active {
     color: #ffffff;
 }
 
-figure {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 
 figure img {
@@ -202,13 +219,7 @@ figure img {
 
 
 video {
-    max-width: 100%;
-}
-
-
-.link-to-photo-gallery {
-
-    display: inline-block;
+    width: 100%;
 }
 
 
@@ -223,7 +234,7 @@ label:not(fieldset label),
 input,
 textarea,
 fieldset {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 
 }
 
@@ -236,7 +247,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    padding-left: 10px;
+    padding-left: .625em;
 }
 
 label,
@@ -249,13 +260,11 @@ fieldset {
 
 label,
 input,
-input::placeholder {
-    font-size: 1.25em;
+input::placeholder,
+textarea::placeholder {
+    font-size: 1.25rem;
 }
 
-textarea::placeholder {
-    font-size: 1.625em;
-}
 
 input {
     line-height: 40px;
@@ -266,35 +275,111 @@ textarea {
 }
 
 
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 100vh;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+
+header {
+    background-color: #FF963E;
+}
+
+footer {
+    background-color: #39494E;
+    color: white;
+}
+
+
 
 
 
 @media only screen and (min-width:1280px) {
 
-
     #homepage-image {
-        width: 50%;
+        width: 30%;
         float: left;
-        margin-right: 40px;
+        margin-right: 1.25em;
 
     }
 
-    main {
-        padding-bottom: 220px;
+    #homepage-content h2:first-of-type {
+        clear: left;
     }
 
-    .detail-page-content {
-        display: flex;
-        flex-direction: column;
-        min-height: 325.32vh;
-        gap: 60px;
+    p:nth-of-type(1):not(section p):not(article p),
+    p:nth-of-type(2):not(section p):not(article p) {
+        font-size: 1.625em;
     }
 
 
-    article {
-        flex-grow: 1;
+
+    .two-part-articles article {
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-template-areas:
+            "column1 column2";
+        margin-bottom: 3.125em;
+
     }
 
+
+    .one-part-articles article {
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-template-areas:
+            "column1 column2"
+            "column1 column2"
+            "column1 column2"
+            "column1 column2"
+            "column1 column2"
+            "column1 column2"
+            "column1 column2";
+        margin-bottom: 3.125em;
+
+    }
+
+
+    .detail-page-content img {
+        width: 100%;
+    }
+
+    .photos {
+        grid-area: column1;
+    }
+
+
+    .text {
+        grid-area: column2;
+    }
+
+
+    .one-part-articles img:not(figure img) {
+        grid-area: column1;
+    }
+
+    a+h2 {
+        padding-bottom: .75em;
+    }
+
+    article h2,
+    ul:not(nav ul) {
+        padding: 0em 1.25em 1.25em 1.25em;
+    }
+
+    article p {
+        padding: 0em 3.4375em 1.25em 1.25em;
+    }
+
+
+    .link-to-photo-gallery {
+        width: 100%;
+    }
 
 
     #hamburger-menu-icon {
@@ -302,78 +387,62 @@ textarea {
     }
 
     #social-media-links {
-        width: 70px;
-        padding-top: 10px;
-        padding-left: 10px;
-        height: 120px;
-        margin-top: 10%;
         right: 0%;
 
     }
 
 
+    section:not(article section) {
+
+        margin-bottom: 1.25em;
+    }
 
 
     section p:nth-of-type(1) {
-        padding-right: 100px;
-    }
-
-
-    .detail-page-content img {
-        width: 35%;
-        float: left;
-        margin-bottom: 40px;
-    }
-
-
-    .detail-page-content>article h2,
-    .detail-page-content>article p,
-    .detail-page-content>article ul,
-    table,
-    video {
-        float: right;
-        width: 55%;
-        margin-right: 85px;
+        padding-right: 3.75em;
     }
 
 
 
 
-    .link-to-photo-gallery {
-        width: 35%;
+    #homepage-content p {
+        margin-right: 3.4375em;
     }
 
 
     figure {
-        clear: right;
-        display: flex;
-        margin-bottom: 40px;
+        margin-bottom: 1.25em;
     }
 
-    figure img,
-    figcaption {
-        margin-left: 33%;
 
+    figure,
+    figcaption,
+    video {
+        margin-left: 3%;
     }
 
     figcaption {
-        font-size: 12px;
+        font-size: .875rem;
         letter-spacing: .5px;
+        text-align: center;
     }
 
+    article {
+        z-index: 1;
+    }
+
+    #social-media-links {
+        z-index: 2;
+    }
 
     article:first-of-type ul+p {
-        text-indent: 52px;
+        text-indent: 44px;
 
     }
 
     tr td:not(:nth-of-type(1)) {
         font-family: 'Arial Monospaced MT', sans-serif;
         word-spacing: .5em;
-    }
-
-    .detail-page-content>article p:last-of-type {
-        margin-bottom: 70px;
     }
 
     label,
@@ -383,7 +452,23 @@ textarea {
         width: 50%;
     }
 
+    .photo-gallery h1 {
+        flex-basis: 100%;
+    }
 
+    .photo-gallery {
+        flex-direction: row;
+    }
+
+    .photo-gallery img {
+        width: 48.8%;
+    }
+
+
+    table {
+        margin-right: 5.3125em;
+        padding: 1.25em;
+    }
 }
 
 
@@ -392,26 +477,32 @@ textarea {
 
 @media only screen and (min-width:481px) and (max-width:1279px) {
 
-    section {
-        margin-top: 40px;
-    }
 
     body {
-        display: grid;
-        grid-template-columns: 30% auto auto;
+        display: flex;
+        flex-wrap: wrap;
     }
 
+
+    section {
+
+        margin-bottom: 2.5em;
+    }
+
+
     header {
-        grid-column: 1;
+        flex-basis: 20%;
+        flex-grow: 1;
     }
 
     main {
-        grid-column: 2/3;
+        flex-basis: 75%;
+        flex-shrink: 0;
     }
 
-    footer {
-        grid-column: 1/3;
 
+    footer {
+        flex-basis: 100%;
     }
 
     #hamburger-menu-icon {
@@ -422,7 +513,7 @@ textarea {
 
     nav {
         position: relative;
-        padding: 15px 0px 15px 0px;
+        padding: .9375em 0em .9375em 0em;
 
     }
 
@@ -452,22 +543,19 @@ textarea {
 
     #homepage-image {
         max-width: 100%;
-        margin-top: 122px;
     }
 
 
     h1:first-child {
-        margin-top: 122px;
+        margin-top: 3.4375em;
     }
 
-    #social-media-links {
-        height: 85px;
-        width: 45px;
-        padding: 2px;
-        left: 0px;
-        margin-top: 15%;
 
+    h1,
+    h2 {
+        padding-bottom: .625em;
     }
+
 
 
     #website-logo {
@@ -475,9 +563,10 @@ textarea {
     }
 
 
-    #social-media-links img {
-        width: 38px;
-        height: 38px;
+
+    #social-media-links {
+        margin-top: 17%;
+
     }
 
 
@@ -486,23 +575,31 @@ textarea {
 
     }
 
+    #homepage-content p+a,
     .link-to-photo-gallery {
 
         width: 100%;
     }
 
-    section,
     article,
     figure {
-        margin-bottom: 80px;
-    }
-
-    main {
-        padding: 0px 0px 170px 10px;
+        margin-bottom: 5em;
     }
 
 
 
+    .photo-gallery {
+        flex-direction: column;
+    }
+
+
+    .photo-gallery img {
+        max-width: 100%;
+    }
+
+    table {
+        font-size: .875rem;
+    }
 
 }
 
@@ -511,35 +608,36 @@ textarea {
 @media only screen and (min-width:481px) and (max-width:800px) {
 
 
-    nav {
-        position: static;
-        margin-top: 50px;
+    header {
+        flex-basis: 30%;
     }
 
-    nav:hover .tabs {
-        top: 135px;
-        width: 30%;
+    main {
+        flex-basis: 70%;
     }
 
     .tabs li {
-        font-size: .875em;
-        font-weight: 900;
+        font-size: .875rem;
     }
+
+
+
+
 
     #social-media-links {
+        height: 104px;
+        width: 56px;
+        padding: .375em;
+        left: 0px;
         margin-top: 22%;
-        height: 70px;
-        padding: 2px;
-        width: 35px;
-        left: 0%;
+
     }
-
-
 
     #social-media-links img {
-        width: 30px;
-        height: 30px;
+        width: 42px;
+        height: 42px;
     }
+
 
 
 }
@@ -548,6 +646,12 @@ textarea {
 
 
 @media only screen and (max-width:480px) {
+
+
+
+    nav ul {
+        flex-direction: column;
+    }
 
     figure {
         display: none;
@@ -566,7 +670,7 @@ textarea {
     .tabs li {
         display: list-item;
         width: 100%;
-        font-size: 1.125em;
+        font-size: 1.125rem;
     }
 
     img {
@@ -574,24 +678,28 @@ textarea {
     }
 
     main {
-        padding: 30px 30px 100px 30px;
+        padding: 4.0625em 2.5em 6.25em 1.875em;
     }
 
-
+    header {
+        position: relative;
+    }
 
     #social-media-links {
-        bottom: 10%;
-        height: 70px;
-        padding: 2px;
-        width: 35px;
-        left: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        height: 50px;
+        padding: 6px;
+        width: 100%;
+        top: 295px;
     }
 
 
 
     #social-media-links img {
-        width: 30px;
-        height: 30px;
+        width: 38px;
+        height: 38px;
     }
 
     #website-logo {
@@ -600,12 +708,22 @@ textarea {
 
 
     article {
-        margin-bottom: 40px;
+        margin-bottom: 2.5em;
     }
 
     .link-to-photo-gallery {
         width: 100%;
     }
+
+
+
+
+    #homepage-content p+a {
+        width: 100%;
+
+    }
+
+
 
 
 }
