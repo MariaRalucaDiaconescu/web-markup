@@ -727,6 +727,8 @@ animation-play-state: paused;
     #homepage-content p+a:first-of-type {
         margin-bottom: 0px;
     }
+
+    body{background-color:yellow;}
 }
 
 
