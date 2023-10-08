@@ -708,7 +708,7 @@ animation-play-state: paused;
 
 /* social media links on smaller tablet and mobile*/
 
-@media only screen and (max-width: 600px), (max-height: 600px){
+@media only screen and (max-width: 600px){
     #social-media-links {
         position: static;
         margin-top: 1em;
@@ -727,6 +727,8 @@ animation-play-state: paused;
     #homepage-content p+a:first-of-type {
         margin-bottom: 0px;
     }
+
+    
 
 }
 
