@@ -708,7 +708,7 @@ animation-play-state: paused;
 
 /* social media links on smaller tablet and mobile*/
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px), (max-height:780px){
     #social-media-links {
         position: static;
         margin-top: 1em;
@@ -728,18 +728,11 @@ animation-play-state: paused;
         margin-bottom: 0px;
     }
 
-    
+    body{background-color:yellow;}
 
 }
 
 
-
-@media only screen and (max-height: 600px){
-
-    body{background-color:yellow;
-
-}
-}
 
 
 /*smaller tablet*/
