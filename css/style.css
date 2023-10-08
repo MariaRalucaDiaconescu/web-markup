@@ -728,11 +728,16 @@ animation-play-state: paused;
         margin-bottom: 0px;
     }
 
-    body{background-color:yellow;}
 }
 
 
 
+@media only screen and (max-height: 600px){
+
+    body{background-color:yellow;
+
+}
+}
 
 
 /*smaller tablet*/
