@@ -328,7 +328,7 @@ textarea {
 .cookie-message {
 
     background-color: #FFBD3E;
-    padding: 65px 40px;
+    padding: 70px 40px;
     display: block;
     position: fixed; 
     bottom: 0px;
@@ -703,12 +703,18 @@ animation-play-state: paused;
         display: none;
     }
 
+    .cookie-message {
+
+        padding: .9375em;
+     
+    }
+
 }
 
 
 /* social media links on smaller tablet and mobile*/
 
-@media only screen and (max-width: 600px), (max-height:780px){
+@media only screen and (max-width: 600px), (max-height:667px){
     #social-media-links {
         position: static;
         margin-top: 1em;
@@ -727,8 +733,6 @@ animation-play-state: paused;
     #homepage-content p+a:first-of-type {
         margin-bottom: 0px;
     }
-
-    body{background-color:yellow;}
 
 }
 
@@ -757,7 +761,7 @@ animation-play-state: paused;
 
     .cookie-message {
 
-        padding: 25px;
+        padding: .625em;
      
     }
 
