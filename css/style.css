@@ -19,7 +19,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 5px;
 }
 
 
@@ -59,10 +58,9 @@ nav ul li {
     text-transform: uppercase;
 }
 
-
+header {background-color: #FF963E;}
 .tabs li {
-    background: #FFFFFF;
-    outline: 3px solid black;
+    background: #DFE0DF;
     color: #000000;
     flex-basis: 16.7%;
     font-size: 1.25rem;
@@ -72,7 +70,7 @@ nav ul li {
 }
 
 .active {
-    background: #000000;
+    background: #D27015;
     display: block;
     color: #ffffff;
 }
@@ -107,7 +105,7 @@ footer p {
 
 nav a:active {
     color: #ffffff;
-    background-color: black;
+    background-color:#D27015;
     display: block;
 }
 
@@ -116,10 +114,9 @@ nav a:active {
 footer {
     font-size: .75rem;
     text-align: center;
-    border: 3px solid black;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+    background-color:#9BAEBC;
+    color:white;
+
 }
 
 
