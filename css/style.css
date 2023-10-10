@@ -244,7 +244,7 @@ figure img {
 
 @media print {
     main {
-        color: cmyk(0%, 9%, 7%, 30%);
+        color: cmyk(2%, 9%, 7%, 30%);
 
     }
 
