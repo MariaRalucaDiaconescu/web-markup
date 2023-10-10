@@ -242,13 +242,13 @@ figure img {
 
 
 
-
+@media print {
     main {
-        color: cmyk(100%, 0%, 0%, 0%);
+        color: cmyk(2, 9, 7, 30);
 
     }
 
-
+}
 
 
 video {
