@@ -215,9 +215,21 @@ td {
 }
 
 
-tr th:first-child {
+tr th:first-child, tr td:first-child{
     background-color: #FF0;
 }
+
+tr th:nth-child(even), tr td:nth-child(even){
+
+background-color:#CCFFFF; 
+
+} 
+
+tr th:nth-child(odd):not(tr th:first-child), tr td:nth-child(odd):not(tr td:first-child){
+
+    background-color:#FFFFFF; 
+    
+    }  
 
 article:first-of-type ul li::first-letter {
     font-size: 2rem;
@@ -335,7 +347,7 @@ textarea {
     margin-bottom: 0px;
     width:100%;
     left:0%;
-    z-index: 3;
+    z-index: 9999;
 
 }
 
