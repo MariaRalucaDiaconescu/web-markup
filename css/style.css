@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
@@ -30,10 +29,6 @@ main {
     flex-grow: 1;
 }
 
-@font-face {
-    font-family: 'Arial Monospaced MT';
-    src: url('arial_monospaced_mt.ttf');
-}
 
 ul {
     list-style: none;
