@@ -20,19 +20,22 @@ body {
     min-height: 100vh;
 }
 
-h1 {font-size:2.125rem;
+h1 {
+    font-size: 2.125rem;
 }
-h2 {font-size: 1.875rem;}
-h3{font-size:1.5rem;}
+
+h2 {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 main {
     flex-grow: 1;
 }
 
-/* @font-face {
-    font-family: 'Arial Monospaced MT';
-    src: url('arial_monospaced_mt.ttf');
-} */
 
 ul {
     list-style: none;
@@ -61,8 +64,10 @@ nav ul li {
     text-transform: uppercase;
 }
 
-header {background-color: #FF963E;
-color: #000000;}
+header {
+    background-color: #FF963E;
+    color: #000000;
+}
 
 
 .tabs li {
@@ -113,7 +118,7 @@ footer p {
 
 nav a:active {
     color: #ffffff;
-    background-color:#D27015;
+    background-color: #D27015;
     display: block;
 }
 
@@ -122,8 +127,8 @@ nav a:active {
 footer {
     font-size: .75rem;
     text-align: center;
-    background-color:#9BAEBC;
-    color:white;
+    background-color: #9BAEBC;
+    color: white;
 
 }
 
@@ -139,22 +144,22 @@ footer {
 
 }
 
-    #social-media-links li {
-        padding: .625em;
-    }
+#social-media-links li {
+    padding: .625em;
+}
 
-    #social-media-links li:nth-of-type(1) {
-        margin-bottom: .3125em;
-    }
+#social-media-links li:nth-of-type(1) {
+    margin-bottom: .3125em;
+}
 
 #social-media-links li:nth-of-type(1) {
     background-color: #FFBD3E;
-    color:transparent;
+    color: transparent;
 }
 
 #social-media-links li:nth-of-type(2) {
     background-color: #FFBD3E;
-    color:transparent;
+    color: transparent;
 
 }
 
@@ -198,7 +203,7 @@ footer {
 
 
 
-p+ul li:not(#social-media-links li){
+p+ul li:not(#social-media-links li) {
     padding: .625em 0em .625em 0em;
 }
 
@@ -209,18 +214,18 @@ td {
 }
 
 
-tr:nth-child(even){
+tr:nth-child(even) {
 
-    background-color:#CCFFFF; 
-    color:#000000;
-    } 
+    background-color: #CCFFFF;
+    color: #000000;
+}
 
- tr:nth-child(odd){
+tr:nth-child(odd) {
 
-    background-color:#FFFFFF; 
-    color:#000000;
-    
-    }   
+    background-color: #FFFFFF;
+    color: #000000;
+
+}
 
 article:first-of-type ul li::first-letter {
     font-size: 2rem;
@@ -323,14 +328,14 @@ textarea {
 .cookie-message {
 
     background-color: #FFBD3E;
-    color:#000000;
+    color: #000000;
     padding: 50px 40px;
     display: block;
-    position: fixed; 
+    position: fixed;
     bottom: 0px;
     margin-bottom: 0px;
-    width:100%;
-    left:0%;
+    width: 100%;
+    left: 0%;
     z-index: 9999;
 
 }
@@ -345,7 +350,7 @@ button {
 aside {
     float: right;
     background-color: #FFBD3E;
-    color:#000000;
+    color: #000000;
     padding: 10px 10px 0px 10px;
 
 }
@@ -355,31 +360,33 @@ aside ul a {
 }
 
 
-.cookie-message{
-pointer-events: none;
-animation: close-panel 1s linear infinite;
-animation-play-state: paused;
+.cookie-message {
+    pointer-events: none;
+    animation: close-panel 1s linear infinite;
+    animation-play-state: paused;
 }
 
 .cookie-message:active {
     animation-play-state: running;
-  }
+}
+
 .cookie-consent {
 
-    pointer-events:initial;
+    pointer-events: initial;
 
 }
 
 @keyframes close-panel {
-    1%{
+    1% {
         clip-path: circle(0);
 
-      }
-      100% {
-        clip-path: circle(0);
-
-      }
     }
+
+    100% {
+        clip-path: circle(0);
+
+    }
+}
 
 
 
@@ -398,14 +405,14 @@ animation-play-state: paused;
     #homepage-content h2:first-of-type {
         clear: left;
     }
- 
+
     #homepage-content p:nth-of-type(1):not(.cookie-message p),
-    #homepage-content p:nth-of-type(2){
+    #homepage-content p:nth-of-type(2) {
         line-height: 36px;
-    } 
+    }
 
 
-  
+
 
     .two-part-articles article {
         display: grid;
@@ -438,17 +445,23 @@ animation-play-state: paused;
         width: 100%;
     }
 
-.two-part-articles article {position: relative;}
-.photos h3 {background-color: white;
-    color:black;
-opacity:50%;
-position:absolute;
-top:0%;
-padding:5px;
-width: fit-content;
-}
+    .two-part-articles article {
+        position: relative;
+    }
 
-    .two-part-articles article h2 {grid-area: heading;}
+    .photos h3 {
+        background-color: white;
+        color: black;
+        opacity: 50%;
+        position: absolute;
+        top: 0%;
+        padding: 5px;
+        width: fit-content;
+    }
+
+    .two-part-articles article h2 {
+        grid-area: heading;
+    }
 
     .photos {
         grid-area: column1;
@@ -464,21 +477,24 @@ width: fit-content;
         grid-area: column1;
     }
 
- ul+h2, a+h2, h3 {
+    ul+h2,
+    a+h2,
+    h3 {
         padding-bottom: 1.5em;
     }
 
 
-    article > p,
+    article>p,
     .text,
     h2:not(#homepage-content h2),
-    article ul, aside ul {
+    article ul,
+    aside ul {
         text-align: left;
-        margin-left:20px;
-        padding: 0em 3.4375em .5em 0em; 
+        margin-left: 20px;
+        padding: 0em 3.4375em .5em 0em;
     }
 
-    
+
 
     .link-to-photo-gallery {
         width: 100%;
@@ -574,7 +590,7 @@ width: fit-content;
 
 /*tablet*/
 
- @media only screen and (min-width:481px) and (max-width:1279px) {
+@media only screen and (min-width:481px) and (max-width:1279px) {
 
 
     section {
@@ -583,7 +599,9 @@ width: fit-content;
     }
 
 
-    .tabs{display:block;}
+    .tabs {
+        display: block;
+    }
 
 
     .tabs li {
@@ -598,7 +616,9 @@ width: fit-content;
     }
 
 
-img:not(header img) {width:100%;}
+    img:not(header img) {
+        width: 100%;
+    }
 
     h1,
     h2 {
@@ -638,11 +658,11 @@ img:not(header img) {width:100%;}
     .cookie-message {
 
         padding: .9375em;
-     
+
     }
 
 
-} 
+}
 
 
 
@@ -650,7 +670,7 @@ img:not(header img) {width:100%;}
 
 /* social media links on mobile and tablet*/
 
-@media only screen and (max-width:1279px){
+@media only screen and (max-width:1279px) {
     #social-media-links {
         position: static;
         margin-top: 1em;
@@ -672,7 +692,7 @@ img:not(header img) {width:100%;}
 
 }
 
- 
+
 
 
 
@@ -698,7 +718,7 @@ img:not(header img) {width:100%;}
     }
 
     img {
-       width: 100%;
+        width: 100%;
     }
 
     main {
@@ -728,19 +748,21 @@ img:not(header img) {width:100%;}
 
     }
 
-    aside {display:none;}
+    aside {
+        display: none;
+    }
 
 
     .cookie-message {
 
         padding: 15px;
-     
+
 
     }
 
 
-    .cookie-message p{ font-size:1.125rem;}
+    .cookie-message p {
+        font-size: 1.125rem;
+    }
 
 }
-
-
