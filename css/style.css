@@ -62,11 +62,12 @@ nav ul li {
 }
 
 header {background-color: #FF963E;
-color: black;}
+color: #000000;}
 
 
 .tabs li {
     background-color: #DFE0DF;
+    color: #000000;
     flex-basis: 16.7%;
     font-size: 1.25rem;
     font-weight: bolder;
@@ -148,10 +149,13 @@ footer {
 
 #social-media-links li:nth-of-type(1) {
     background-color: #FFBD3E;
+    color:transparent;
 }
 
 #social-media-links li:nth-of-type(2) {
     background-color: #FFBD3E;
+    color:transparent;
+
 }
 
 
@@ -168,6 +172,7 @@ footer {
 #links-to-articles li::marker {
     content: "▶";
     color: #FFBD3E;
+    background-color: initial;
 }
 
 
