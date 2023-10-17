@@ -388,6 +388,11 @@ aside ul a {
     }
 }
 
+input[type="submit"]+p{display:none;
+
+}
+
+input[type="submit"]:focus+p{display: block;}
 
 
 
