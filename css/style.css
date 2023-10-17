@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: "Arial", "Helvetica", sans-serif;
+    font-family: "Oswald", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -195,14 +195,6 @@ footer {
 
 
 
-h1,
-#homepage-content h2 {
-    font-family: 'Notable', sans-serif;
-    font-weight: lighter;
-}
-
-
-
 
 p+ul li:not(#social-media-links li){
     padding: .625em 0em .625em 0em;
@@ -215,21 +207,16 @@ td {
 }
 
 
-tr th:first-child, tr td:first-child{
-    background-color: #FF0;
-}
+tr:nth-child(even){
 
-tr th:nth-child(even), tr td:nth-child(even){
+    background-color:#CCFFFF; 
+    } 
 
-background-color:#CCFFFF; 
-
-} 
-
-tr th:nth-child(odd):not(tr th:first-child), tr td:nth-child(odd):not(tr td:first-child){
+ tr:nth-child(odd){
 
     background-color:#FFFFFF; 
     
-    }  
+    }   
 
 article:first-of-type ul li::first-letter {
     font-size: 2rem;
@@ -258,14 +245,6 @@ figure img {
 }
 
 
-
-@media print {
-    main {
-        color: cmyk(0%, 22%, 83%, 0%);
-
-    }
-
-}
 
 
 video {
@@ -416,7 +395,7 @@ animation-play-state: paused;
  
     #homepage-content p:nth-of-type(1):not(.cookie-message p),
     #homepage-content p:nth-of-type(2){
-        font-size: 1.625rem;
+        font-size: 1.5rem;
         line-height: 36px;
     } 
 
