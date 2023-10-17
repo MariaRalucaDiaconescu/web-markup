@@ -386,7 +386,7 @@ animation-play-state: paused;
 
 /*desktop*/
 
-@media only screen and (min-width:1280px) {
+@media only screen and (min-width:769px) {
 
     #homepage-image {
         width: 50%;
@@ -574,7 +574,7 @@ width: fit-content;
 
 /*tablet*/
 
-@media only screen and (min-width:481px) and (max-width:1279px) {
+ @media only screen and (min-width:481px) and (max-width:1279px) {
 
 
     section {
@@ -641,10 +641,14 @@ img:not(header img) {width:100%;}
      
     }
 
-}
+
+} 
 
 
-/* social media links on smaller tablet and mobile*/
+
+
+
+/* social media links on mobile and tablet*/
 
 @media only screen and (max-width:1279px){
     #social-media-links {
@@ -668,13 +672,13 @@ img:not(header img) {width:100%;}
 
 }
 
-
+ 
 
 
 
 /*mobile*/
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:768px) {
 
     nav ul {
         flex-direction: column;
@@ -736,8 +740,6 @@ img:not(header img) {width:100%;}
 
 
     .cookie-message p{ font-size:1.125rem;}
-
-
 
 }
 
