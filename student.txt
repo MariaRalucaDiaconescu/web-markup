@@ -1,0 +1,5 @@
+Student name: Maria Raluca Diaconescu
+Student number: 683265
+Student class: Retake
+GitHub Repository: https://github.com/MariaRalucaDiaconescu/web-markup
+GitHub Pages URL: https://mariaralucadiaconescu.github.io/web-markup/
