@@ -79,6 +79,13 @@ header {
     line-height: 40px;
 }
 
+
+nav a:active {
+    color: #ffffff;
+    background-color: #D27015;
+    display: block;
+}
+
  .active {
     background-color: #D27015;
     display: block;
@@ -664,6 +671,7 @@ fieldset {
     }
 
 
+  body{background-color:#9BAEBC;}
 }
 
 
@@ -673,7 +681,8 @@ fieldset {
 
 /*small tablet*/
 
-@media only screen and (min-width:481px) and (max-width:768px) {
+@media only screen and (min-width:481px) and (max-width:768px)
+{
 
 
     main {
@@ -712,7 +721,8 @@ figure{display:block;}
 
 
     table {
-        font-size: 1.25rem;
+        width:100%;
+        font-size: 110%;
     }
 
     #social-media-links img {
@@ -724,3 +734,5 @@ figure{display:block;}
 
 } 
  
+
+
