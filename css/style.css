@@ -247,7 +247,7 @@ figure img {
 
 
 video {
-    width: 100%;
+    width:97%;
 }
 
 
@@ -301,8 +301,8 @@ textarea {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 
@@ -331,7 +331,7 @@ button {
 
 aside {
     float: right;
-    background-color: #FFBD3E;
+    background-color: #DFE0DF;
     color: #000000;
     padding: .625em .625em 0em .625em;
 
@@ -391,8 +391,9 @@ fieldset {
 @media only screen and (min-width:769px) {
 
     main {
-        padding: 1.25em .625em 11.25em .625em;
-    }    
+        padding: 1.75em 1.75em 6.25em 1.75em;
+    
+    }
 
     #homepage-image {
         width: 50%;
@@ -405,35 +406,14 @@ fieldset {
         clear: left;
     }
 
-    #homepage-content p:nth-of-type(1):not(.cookie-message p),
-    #homepage-content p:nth-of-type(2) {
-        line-height: 32px;
-    }
 
 
-
-
-    .two-part-articles article {
+    .two-part-articles article,
+    .one-part-articles article  {
         display: grid;
         grid-template-columns: 30% auto;
         grid-template-areas:
             "column1 heading"
-            "column1 column2";
-        margin-bottom: 3.125em;
-
-    }
-
-
-    .one-part-articles article {
-        display: grid;
-        grid-template-columns: 30% auto;
-        grid-template-areas:
-            "column1 column2"
-            "column1 column2"
-            "column1 column2"
-            "column1 column2"
-            "column1 column2"
-            "column1 column2"
             "column1 column2";
         margin-bottom: 3.125em;
 
@@ -458,7 +438,8 @@ fieldset {
         width: fit-content;
     }
 
-    .two-part-articles article h2 {
+    .two-part-articles article h2,
+    .one-part-articles article h2{
         grid-area: heading;
     }
 
@@ -466,15 +447,14 @@ fieldset {
         grid-area: column1;
     }
 
-
-    .text {
-        grid-area: column2;
-    }
-
-
     .one-part-articles img:not(figure img) {
         grid-area: column1;
     }
+
+    .text{
+        grid-area: column2;
+    }
+
 
     ul+h2,
     a+h2,
@@ -483,10 +463,11 @@ fieldset {
     }
 
 
-    article>p,
+
     .text,
-    h2:not(#homepage-content h2):not(section:first-of-type h2),
-    article ul,
+    article h2,
+    article ul:not(article:first-of-type ul),
+    aside h2,
     aside ul {
         text-align: left;
         margin-left: 20px;
@@ -555,18 +536,19 @@ fieldset {
     input:not(fieldset input):not(.submit-button),
     textarea,
     fieldset {
-        width: 50%;
+        width: 45%;
     }
 
     .photo-gallery h1 {
         flex-basis: 100%;
+        padding:6px;
     }
 
   
 
     .photo-gallery img {
         
-        width: 48.8%;
+        width: 48.5%;
     }
 
 
@@ -574,7 +556,6 @@ fieldset {
         margin-right: 5.3125em;
         padding: 1.25em;
     }
-
 
 
 }
@@ -608,7 +589,7 @@ fieldset {
     }
 
     main {
-        padding: 2.5em 2.5em 6.25em 1.875em;
+        padding: .9375em;
     }
 
     .photo-gallery {
@@ -671,7 +652,6 @@ fieldset {
     }
 
 
-  body{background-color:#9BAEBC;}
 }
 
 
@@ -686,7 +666,7 @@ fieldset {
 
 
     main {
-        padding: 1.25em .625em 11.25em .625em;
+        padding: 1.5em 1.5em 3.125em 1.5em;
     }
 
 
@@ -734,5 +714,3 @@ figure{display:block;}
 
 } 
  
-
-
