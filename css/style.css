@@ -86,11 +86,11 @@ nav a:active {
     display: block;
 }
 
- .active {
+.active {
     background-color: #D27015;
     display: block;
     color: #ffffff;
-} 
+}
 
 nav a {
     text-decoration: none;
@@ -107,13 +107,11 @@ main ul:not(#social-media-links),
     font-size: 1.375rem;
 }
 
-
-
 h1,
 p:not(footer p),
-ul:not(nav ul):not(#social-media-links),
+ul:not(nav ul):not(#social-media-links):not(.bottom-navigation),
 ol {
-    padding-bottom: 1.25em;
+    padding-bottom: .625em;
 }
 
 footer p {
@@ -247,12 +245,12 @@ figure img {
 
 
 video {
-    width:97%;
+    width: 97%;
 }
 
 
 
-label:not(fieldset label){
+label:not(fieldset label) {
     display: block;
 }
 
@@ -370,11 +368,14 @@ aside ul a {
     }
 }
 
-input[type="submit"]+p{display:none;
+input[type="submit"]+p {
+    display: none;
 
 }
 
-input[type="submit"]:active+p{display: block;}
+input[type="submit"]:active+p {
+    display: block;
+}
 
 
 label,
@@ -382,7 +383,7 @@ input:not(fieldset input):not(.submit-button),
 textarea,
 fieldset {
     width: 100%;
-} 
+}
 
 
 
@@ -392,7 +393,11 @@ fieldset {
 
     main {
         padding: 1.75em 1.75em 6.25em 1.75em;
-    
+
+    }
+
+    .bottom-navigation {
+        display: none;
     }
 
     #homepage-image {
@@ -409,7 +414,7 @@ fieldset {
 
 
     .two-part-articles article,
-    .one-part-articles article  {
+    .one-part-articles article {
         display: grid;
         grid-template-columns: 30% auto;
         grid-template-areas:
@@ -439,7 +444,7 @@ fieldset {
     }
 
     .two-part-articles article h2,
-    .one-part-articles article h2{
+    .one-part-articles article h2 {
         grid-area: heading;
     }
 
@@ -451,9 +456,10 @@ fieldset {
         grid-area: column1;
     }
 
-    .text{
+    .text {
         grid-area: column2;
     }
+
 
 
     ul+h2,
@@ -541,13 +547,13 @@ fieldset {
 
     .photo-gallery h1 {
         flex-basis: 100%;
-        padding:6px;
+        padding: 6px;
     }
 
-  
+
 
     .photo-gallery img {
-        
+
         width: 48.5%;
     }
 
@@ -558,6 +564,7 @@ fieldset {
     }
 
 
+    #scroll-icon {display:none;}
 }
 
 
@@ -567,35 +574,86 @@ fieldset {
 @media only screen and (max-width:768px) {
 
 
-    nav ul {
-        flex-direction: column;
-    }
-
     figure {
         display: none;
     }
 
 
     .tabs li {
-        font-size: 1.125rem;
+        font-size: 1rem;
+        flex-basis: 25%;
+
     }
+
+    nav a {
+        color: #605B5B;
+        text-transform: capitalize;
+    }
+
+    nav a:active {
+        background-color: #DFE0DF;
+        border-bottom: 4px solid #D27015;
+        color: #000000;
+
+    }
+
+    .active {
+        background-color: #DFE0DF;
+        border-bottom: 4px solid #D27015;
+        color: #000000;
+
+    }
+
+    .tabs li:nth-of-type(1),
+    .tabs li:nth-of-type(6) {
+        display: none;
+    }
+
+    ul.homepage,
+    ul.contact-page {
+        display: none;
+    }
+
+    .bottom-navigation {
+        display: flex;
+        background-color: #9BAEBC;
+        width: 100%;
+        height: 15%;
+        position: fixed;
+        bottom: 0%;
+        left:0%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .bottom-navigation li {
+
+        flex-basis: 12%;
+    }
+
 
     #website-logo {
-        max-width: 40%;
+        max-width: 30%;
     }
 
-    img {
+    #scroll-icon{
+
+        display: block;
+        margin:.3125em auto;
+    }
+
+    img:not(#scroll-icon) {
         width: 100%;
     }
 
     main {
-        padding: .9375em;
+        padding: .9375em .9375em 4.375em .9375em;
+        
     }
 
-    .photo-gallery {
-        flex-direction: column;
-    } 
-
+    .link-to-photo-gallery {
+        display: none;
+    }
 
     #social-media-links img {
         width: 38px;
@@ -607,8 +665,9 @@ fieldset {
         margin-bottom: 2.5em;
     }
 
+    h1 {padding:0em;}
 
-    .link-to-photo-gallery,
+
     #homepage-content p+a {
         width: 100%;
     }
@@ -630,7 +689,9 @@ fieldset {
         font-size: 1.125rem;
     }
 
-    .photos h3 {display:none;}
+    .photos h3 {
+        display: none;
+    }
 
     #social-media-links {
         position: static;
@@ -651,66 +712,10 @@ fieldset {
         margin-bottom: 0em;
     }
 
+    section h3 {
+        display: none;
+    }
 
 }
 
 
-
-
-
-
-/*small tablet*/
-
-@media only screen and (min-width:481px) and (max-width:768px)
-{
-
-
-    main {
-        padding: 1.5em 1.5em 3.125em 1.5em;
-    }
-
-
-     .tabs {
-        display: block;
-    }
-
-
-    .tabs li {
-        line-height: 30px;
-        font-size: 1.25rem;
-
-    } 
-
-    #website-logo {
-        max-width: 30%;
-    }
-
-    h1,
-    h2 {
-        padding-bottom: .625em;
-    }
-
-
-figure{display:block;}
-
-
-    article,
-    figure {
-        margin-bottom: 5em;
-    }
-
-
-    table {
-        width:100%;
-        font-size: 110%;
-    }
-
-    #social-media-links img {
-        width: 40px;
-        height: 40px;
-    }
-
-
-
-} 
- 
