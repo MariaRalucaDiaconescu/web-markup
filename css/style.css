@@ -80,17 +80,7 @@ header {
 }
 
 
-nav a:active {
-    color: #ffffff;
-    background-color: #D27015;
-    display: block;
-}
 
-.active {
-    background-color: #D27015;
-    display: block;
-    color: #ffffff;
-}
 
 nav a {
     text-decoration: none;
@@ -309,7 +299,7 @@ textarea {
 
     background-color: #FFBD3E;
     color: #000000;
-    padding: 3.125em 2.5em;
+    padding: 2.5em;
     display: block;
     position: fixed;
     bottom: 0%;
@@ -391,6 +381,18 @@ fieldset {
 
 @media only screen and (min-width:769px) {
 
+    nav a:active {
+        color: #ffffff;
+        background-color: #D27015;
+        display: block;
+    }
+
+    .active {
+        background-color: #D27015;
+        display: block;
+        color: #ffffff;
+    }
+
     main {
         padding: 1.75em 1.75em 6.25em 1.75em;
 
@@ -462,8 +464,7 @@ fieldset {
 
 
 
-    ul+h2,
-    a+h2,
+    #homepage-content article h2,
     h3 {
         padding-bottom: 1.5em;
     }
@@ -471,7 +472,7 @@ fieldset {
 
 
     .text,
-    article h2,
+    .detail-page-content article h2,
     article ul:not(article:first-of-type ul),
     aside h2,
     aside ul {
@@ -503,6 +504,7 @@ fieldset {
     #homepage-content p {
         margin-right: 2.5em;
     }
+
 
 
     figure {
@@ -564,7 +566,14 @@ fieldset {
     }
 
 
-    #scroll-icon {display:none;}
+    #scroll-icon {
+        display: none;
+    }
+
+    .detail-page-content h1+img {
+        display: none;
+    }
+
 }
 
 
@@ -621,7 +630,7 @@ fieldset {
         height: 15%;
         position: fixed;
         bottom: 0%;
-        left:0%;
+        left: 0%;
         align-items: center;
         justify-content: space-around;
     }
@@ -636,10 +645,10 @@ fieldset {
         max-width: 30%;
     }
 
-    #scroll-icon{
+    #scroll-icon {
 
         display: block;
-        margin:.3125em auto;
+        margin: .4375em auto;
     }
 
     img:not(#scroll-icon) {
@@ -648,7 +657,7 @@ fieldset {
 
     main {
         padding: .9375em .9375em 4.375em .9375em;
-        
+
     }
 
     .link-to-photo-gallery {
@@ -665,7 +674,9 @@ fieldset {
         margin-bottom: 2.5em;
     }
 
-    h1 {padding:0em;}
+    h1 {
+        padding: 0em;
+    }
 
 
     #homepage-content p+a {
@@ -679,8 +690,7 @@ fieldset {
 
     .cookie-message {
 
-        padding: .9375em;
-
+        display: none;
 
     }
 
@@ -712,10 +722,154 @@ fieldset {
         margin-bottom: 0em;
     }
 
-    section h3 {
+    section h3:not(.cookie-message h3) {
         display: none;
     }
 
+    #homepage-content article {
+        display: none;
+    }
+
+
+    section:first-of-type ol,
+    section:first-of-type h2,
+    section:first-of-type:not(#homepage-content section) p:nth-of-type(2) {
+        display: none;
+    }
+
+    article:nth-of-type(4) {
+        display: none;
+    }
 }
 
 
+/*mobile*/
+
+@media only screen and (max-width:375px) {
+
+    .tabs li {
+        font-size: .75em;
+    }
+}
+
+
+
+/*small tablet*/
+
+@media only screen and (min-width:600px) and (max-width:768px) {
+
+
+    main {
+        padding: 1.5em 1.5em 3.125em 1.5em;
+    }
+
+
+    .tabs {
+        display: block;
+    }
+
+
+    .tabs li {
+        line-height: 30px;
+        font-size: 1.25rem;
+
+    }
+
+    #website-logo {
+        max-width: 30%;
+    }
+
+    h1,
+    h2 {
+        padding-bottom: .625em;
+    }
+
+
+    figure {
+        display: block;
+    }
+
+
+    article,
+    figure {
+        margin-bottom: 5em;
+    }
+
+
+    table {
+        width: 100%;
+        font-size: 110%;
+    }
+
+    #social-media-links img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .bottom-navigation {
+        display: none;
+    }
+
+    ul.homepage,
+    ul.contact-page {
+        display: block;
+    }
+
+    .tabs li:nth-of-type(1),
+    .tabs li:nth-of-type(6) {
+        display: block;
+    }
+
+
+    nav a:active {
+        color: #ffffff;
+        background-color: #D27015;
+        display: block;
+    }
+
+    .active {
+        background-color: #D27015;
+        display: block;
+        color: #ffffff;
+    }
+
+
+    nav a {
+        color: black;
+    }
+
+    .cookie-message {
+
+        display: block;
+
+    }
+
+
+    #scroll-icon {
+        display: none;
+    }
+
+
+    #homepage-content article,
+    .link-to-photo-gallery {
+        display: block;
+    }
+
+
+    section:first-of-type ol,
+    section:first-of-type h2,
+    section:first-of-type:not(#homepage-content section) p:nth-of-type(2) {
+        display: block;
+    }
+
+    article:nth-of-type(4) {
+        display: block;
+    }
+
+    h1:first-of-type:not(.photo-gallery h1)+img {
+        display: none;
+    }
+
+
+}
