@@ -99,7 +99,7 @@ main ul:not(#social-media-links),
 
 h1,
 p:not(footer p),
-ul:not(nav ul):not(#social-media-links):not(.bottom-navigation),
+section ul,
 ol {
     padding-bottom: .625em;
 }
@@ -126,7 +126,6 @@ footer {
     width: fit-content;
     bottom: 17%;
     right: 0%;
-    z-index: 2;
 }
 
 
@@ -187,20 +186,20 @@ p+ul li:not(#social-media-links li) {
 
 
 
-td {
+th, td {
     text-align: center;
 }
 
 
 tr:nth-child(even) {
 
-    background-color: #CCFFFF;
+    background-color: #CFF;
     color: #000000;
 }
 
 tr:nth-child(odd) {
 
-    background-color: #FFFFFF;
+    background-color: #FFF;
     color: #000000;
 
 }
@@ -454,7 +453,7 @@ fieldset {
         grid-area: column1;
     }
 
-    .one-part-articles img:not(figure img) {
+    .one-part-articles img {
         grid-area: column1;
     }
 
@@ -473,13 +472,13 @@ fieldset {
 
     .text,
     .detail-page-content article h2,
-    article ul:not(article:first-of-type ul),
     aside h2,
     aside ul {
         text-align: left;
         margin-left: 20px;
         padding: 0em 3.4375em .5em 0em;
     }
+
 
 
 
@@ -494,9 +493,9 @@ fieldset {
     }
 
 
-    section p:nth-of-type(1) {
-        padding-right: 3.75em;
-    }
+    .detail-page-content img:nth-of-type(2)+section > p {
+        padding-right: 2.5em;
+    }  
 
 
 
@@ -505,35 +504,11 @@ fieldset {
         margin-right: 2.5em;
     }
 
+    figure {display: none;}
+    video{display:none;}
 
+    
 
-    figure {
-        margin-bottom: 1.25em;
-    }
-
-
-    figure,
-    figcaption,
-    video {
-        margin-left: 3%;
-    }
-
-    figcaption {
-        font-size: .875rem;
-        letter-spacing: .5px;
-        text-align: center;
-    }
-
-    article {
-        z-index: 1;
-    }
-
-
-
-    article:first-of-type ul+p {
-        text-indent: 44px;
-
-    }
 
     tr td:not(:nth-of-type(1)):not(:nth-of-type(2)) {
         font-family: 'Arial Monospaced MT', sans-serif;
@@ -733,7 +708,7 @@ fieldset {
 
     section:first-of-type ol,
     section:first-of-type h2,
-    section:first-of-type:not(#homepage-content section) p:nth-of-type(2) {
+    .detail-page-content section p:nth-of-type(2) {
         display: none;
     }
 
@@ -748,7 +723,7 @@ fieldset {
 @media only screen and (max-width:375px) {
 
     .tabs li {
-        font-size: .75em;
+        font-size: .75rem;
     }
 }
 
@@ -789,9 +764,21 @@ fieldset {
         display: block;
     }
 
+    figcaption {
+        font-size: .875rem;
+        letter-spacing: .5px;
+        text-align: center;
+    }
 
-    article,
-    figure {
+    article:first-of-type ul+p {
+        text-indent: 15vw;
+        font-size:3vw;
+
+    }
+
+    video {display: none;}
+
+    article {
         margin-bottom: 5em;
     }
 
@@ -859,7 +846,7 @@ fieldset {
 
     section:first-of-type ol,
     section:first-of-type h2,
-    section:first-of-type:not(#homepage-content section) p:nth-of-type(2) {
+    .detail-page-content section p:nth-of-type(2) {
         display: block;
     }
 
@@ -867,9 +854,12 @@ fieldset {
         display: block;
     }
 
-    h1:first-of-type:not(.photo-gallery h1)+img {
+    .detail-page-content h1+img{
         display: none;
     }
+
+
+.photo-gallery{justify-content: flex-start;}
 
 
 }
