@@ -114,7 +114,7 @@ footer p {
 footer {
     font-size: .75rem;
     text-align: center;
-    background-color: #9BAEBC;
+    background-color: #4F5051;
     color: white;
 
 }
@@ -309,6 +309,11 @@ textarea {
 
 }
 
+.cookie-message img {width:32px;
+height:32px;
+vertical-align: middle;
+margin-left: .25em;}
+
 
 button {
     border-radius: 0;
@@ -382,12 +387,12 @@ fieldset {
 
     nav a:active {
         color: #ffffff;
-        background-color: #D27015;
+        background-color: #4F2246;
         display: block;
     }
 
     .active {
-        background-color: #D27015;
+        background-color: #4F2246;
         display: block;
         color: #ffffff;
     }
@@ -570,21 +575,23 @@ fieldset {
     }
 
     nav a {
-        color: #605B5B;
+        color: #474748;
         text-transform: capitalize;
     }
 
     nav a:active {
         background-color: #DFE0DF;
-        border-bottom: 4px solid #D27015;
+        border-bottom: 4px solid #893A55;
         color: #000000;
+        display:block;
 
     }
 
     .active {
         background-color: #DFE0DF;
-        border-bottom: 4px solid #D27015;
+        border-bottom: 4px solid #893A55;
         color: #000000;
+        display:block;
 
     }
 
@@ -600,9 +607,9 @@ fieldset {
 
     .bottom-navigation {
         display: flex;
-        background-color: #9BAEBC;
+        background-color: #4F5051;
         width: 100%;
-        height: 15%;
+        height: fit-content;
         position: fixed;
         bottom: 0%;
         left: 0%;
@@ -610,10 +617,22 @@ fieldset {
         justify-content: space-around;
     }
 
-    .bottom-navigation li {
+     .selected-tab{background-color: #4D0A3E;}
+    .bottom-navigation li:active{background-color:#4D0A3E;
+} 
 
-        flex-basis: 12%;
-    }
+
+
+    .bottom-navigation li {
+        width: 100%;
+}
+
+.bottom-navigation li a{display: block;
+width: 30%;
+margin: .25em auto;
+}
+    
+li a img {display:block;}
 
 
     #website-logo {
@@ -811,14 +830,16 @@ fieldset {
 
     nav a:active {
         color: #ffffff;
-        background-color: #D27015;
+        background-color: #4D0A3E;
         display: block;
+        border: none;
     }
 
     .active {
-        background-color: #D27015;
+        background-color: #4D0A3E;
         display: block;
         color: #ffffff;
+        border: none;
     }
 
 
@@ -863,3 +884,4 @@ fieldset {
 
 
 }
+
