@@ -389,6 +389,7 @@ fieldset {
 .submit-button {background-color: #FF963E;
 border:none;
 padding: .3125em .625em;
+color:#000000;
 
 }
 
@@ -627,6 +628,7 @@ padding: .3125em .625em;
     .bottom-navigation {
         display: flex;
         background-color: #4F5051;
+        color: transparent;
         width: 100%;
         height: fit-content;
         position: fixed;
@@ -638,10 +640,12 @@ padding: .3125em .625em;
 
     .selected-tab {
         background-color: #4D0A3E;
+        color:transparent;
     }
 
     .bottom-navigation li:active {
         background-color: #4D0A3E;
+        color:transparent;
     }
 
 
